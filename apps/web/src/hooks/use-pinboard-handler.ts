@@ -64,7 +64,7 @@ export function usePinboardHandler({
   const addPin = useCallback(
     (parentId: string) => {
       const id = nanoid();
-      createPage(id, parentId);
+      createPage(id);
       onAdd?.(id, parentId);
       addReferenceLink(parentId, id);
     },
